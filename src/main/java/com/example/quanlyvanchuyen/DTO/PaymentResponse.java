@@ -15,5 +15,4 @@ public class PaymentResponse {
     private String paymentDate;
 
     private String paymentStatus;
-    private Paymentdto paymentdto;
 }

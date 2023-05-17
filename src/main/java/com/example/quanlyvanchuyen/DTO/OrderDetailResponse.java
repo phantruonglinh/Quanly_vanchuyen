@@ -12,5 +12,4 @@ public class OrderDetailResponse {
 
     private String unitPrice;
 
-    private OrderDetaildto orderDetaildto;
 }

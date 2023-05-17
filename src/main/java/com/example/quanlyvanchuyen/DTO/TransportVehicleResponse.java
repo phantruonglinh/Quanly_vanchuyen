@@ -11,5 +11,4 @@ public class TransportVehicleResponse {
     private String transportVehicleName;
 
     private String capacity;
-    private TransportVehicledto transportVehicledto;
 }

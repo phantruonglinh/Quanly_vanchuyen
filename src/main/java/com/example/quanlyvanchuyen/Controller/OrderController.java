@@ -25,8 +25,8 @@ public class OrderController {
         return ResponseEntity.status(HttpStatus.CREATED).body(orderService.addOrder(orderdto));
     }
     @PutMapping("/{id}")
-    public Order updateOrder(@RequestBody Orderdto orderdto, @PathVariable Long id) {
-        return orderService.updateOrder(orderdto, id);
+    public ResponseEntity<?> updateOrder(@RequestBody Orderdto orderdto, @PathVariable Long id) {
+        return ResponseEntity.status(HttpStatus.OK).body(orderService.updateOrder(orderdto, id));
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteOrder(@PathVariable Long id){

@@ -15,6 +15,4 @@ public class CustomerResponse {
     private String phoneNumber;
 
     private String address;
-
-    private Customerdto customerdto;
 }

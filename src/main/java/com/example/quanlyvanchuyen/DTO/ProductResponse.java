@@ -14,5 +14,4 @@ public class ProductResponse {
 
     private Long quantity;
 
-    private Productdto productdto;
 }

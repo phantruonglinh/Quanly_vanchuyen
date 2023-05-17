@@ -11,6 +11,4 @@ public class CategoryResponse {
     private  String categoryName;
 
     private String description;
-
-    private Categorydto categorydto;
 }

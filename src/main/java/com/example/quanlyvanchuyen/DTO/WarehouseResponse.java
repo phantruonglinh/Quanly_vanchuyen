@@ -12,5 +12,4 @@ public class WarehouseResponse {
 
     private String Aadress;
 
-    private Warehousedto warehousedto;
 }

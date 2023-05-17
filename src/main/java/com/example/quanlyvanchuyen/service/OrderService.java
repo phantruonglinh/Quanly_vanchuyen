@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface OrderService {
     List<OrderResponse> listOrder();
-    Order addOrder(Orderdto orderdto);
-    Order updateOrder(Orderdto orderdto,Long id);
+    OrderResponse addOrder(Orderdto orderdto);
+    OrderResponse updateOrder(Orderdto orderdto,Long id);
     public boolean deleteOrder(Long id);
 }

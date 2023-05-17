@@ -13,6 +13,4 @@ public class OrderResponse {
     private String deliveryDate;
 
     private String totalAmount;
-
-    private CustomerResponse customerResponse;
 }

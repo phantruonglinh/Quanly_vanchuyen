@@ -10,6 +10,4 @@ public class BatchResponse {
     private String batchDate;
 
     private String quantity;
-
-    private Batchdto batchdto;
 }

@@ -31,7 +31,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Order addOrder(Orderdto orderdto) {
+    public OrderResponse addOrder(Orderdto orderdto) {
         Order order = new Order();
         Customer customer = customerRepository.findById(orderdto.getCustomerID()).orElseThrow(() -> new DataNotFoundException("Customer not found"));
         order.setDeliveryDate(orderdto.getDeliveryDate());
@@ -39,16 +39,17 @@ public class OrderServiceImpl implements OrderService {
         order.setTotalAmount(orderdto.getTotalAmount());
         order.setCustomer(customer);
         orderRepository.save(order);
-        return order;
+        return new MapOrder().mapToOrderResponse(order);
     }
 
     @Override
-    public Order updateOrder(Orderdto orderdto, Long id) {
+    public OrderResponse updateOrder(Orderdto orderdto, Long id) {
         Order ex = orderRepository.findById(id).
                 orElseThrow(()-> new DataNotFoundException("Order not found"));
         Order order = OrderMapper.MAPPER.mapToOrder(orderdto);
         order.setOrderID(ex.getOrderID());
-        return null;
+        orderRepository.save(order);
+        return new MapOrder().mapToOrderResponse(order);
     }
 
     @Override

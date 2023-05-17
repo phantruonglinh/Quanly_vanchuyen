@@ -7,7 +7,6 @@ import lombok.Setter;
 @Setter
 public class Orderdto {
 
-    private Long orderID;
 
     private String orderDate;
 
