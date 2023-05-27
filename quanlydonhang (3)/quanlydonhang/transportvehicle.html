@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Quản lý vận chuyển</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Quản lý vận chuyển</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="customer.html">Quản lý khách hàng</a></li>
+                <li><a href="quanlydonhang.html">Danh sách đơn hàng</a></li>
+                <li><a href="transportvehicle.html">Quản lý xe vận chuyển</a></li>
+                <li><a href="quanlysanpham.html">Quản lý sản phẩm</a></li>
+                <li><a href="quanlyloaihang.html">Quản lý loại hàng</a></li>
+                <li><a href="quanlykho.html">Quản lý kho</a></li>
+                <li><a href="quanlythanhtoan.html">Quản lý thanh toán </a></li>
+        </nav>
+    </header>
+
+    <body>
+        <div class="container">
+            <h2>LIST XE VẬN CHUYỂN</h2>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                Thêm xe vân chuyển
+            </button>
+            <!-- Modal -->
+            <input type="text" id="searchInput" placeholder="Search transportvehicle...">
+
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Thêm mới</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-customer">
+                                <div class="form-group">
+                                    <label>Tên xe</label>
+                                    <input type="text" class="form-control" name="transportVehicleName" placeholder="Enter transportVehicleName">
+                                </div>
+                                <div class="form-group">
+                                    <label>Trạng thái</label>
+                                    <input type="text" class="form-control" name="status" placeholder="Enter status">
+                                </div>
+                                <div class="form-group">
+                                    <label>Khối lượng</label>
+                                    <input type="text" class="form-control" name="capacity" placeholder="Enter capacity">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Edit Modal -->
+            <div id="editCus" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Cập nhật</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-customer">
+                                <div class="form-group">
+                                    <label>Tên xe</label>
+                                    <input type="text" class="form-control" name="transportVehicleName" placeholder="Enter Tên xe">
+                                </div>
+                                <div class="form-group">
+                                    <label>Trạng thái</label>
+                                    <input type="text" class="form-control" name="status" placeholder="Enter Trạng thái">
+                                </div>
+                                <div class="form-group">
+                                    <label>Khối lượng</label>
+                                    <input type="text" class="form-control" name="capacity" placeholder="Enter Khối lượng">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <table id="table-customer" class="table table-bordered">
+                <tr>
+                    <th>Mã xe</th>
+                    <th>Tên xe</th>
+                    <th>Trạng thái</th>
+                    <th>Khối lượng</th>
+                    <th>Action</th>
+                </tr>
+
+
+            </table>
+        </div>
+        <script src="transportvehicle.js"></script>
+
+</html>

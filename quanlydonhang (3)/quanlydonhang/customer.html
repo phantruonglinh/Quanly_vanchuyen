@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Quản lý vận chuyển</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Quản lý vận chuyển</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="customer.html">Quản lý khách hàng</a></li>
+                <li><a href="quanlydonhang.html">Danh sách đơn hàng</a></li>
+                <li><a href="transportvehicle.html">Quản lý xe vận chuyển</a></li>
+                <li><a href="quanlysanpham.html">Quản lý sản phẩm</a></li>
+                <li><a href="quanlyloaihang.html">Quản lý loại hàng</a></li>
+                <li><a href="quanlykho.html">Quản lý kho</a></li>
+                <li><a href="quanlythanhtoan.html">Quản lý thanh toán </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>LIST KHÁCH HÀNG</h2>
+        
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Thêm khách hàng
+        </button>
+        <!-- Modal -->
+        <input type="text" id="searchInput" placeholder="Search customers...">
+
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Thêm mới</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-customer">
+                            <div class="form-group">
+                                <label>Tên khách hàng</label>
+                                <input type="text"  class="form-control" name="customerName" placeholder="Enter Fullname">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" class="form-control" name="email" placeholder="Enter Email">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="text" class="form-control" name="phoneNumber" placeholder="Enter Phone">
+                            </div>
+                            <div class="form-group">
+                                <label>Địa chỉ</label>
+                                <input type="text" class="form-control" name="address" placeholder="Enter Address">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--Edit Modal -->
+        <div id="editCus" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Cập nhật</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-customer">
+                            <div class="form-group">
+                                <label>Tên khách hàng</label>
+                                <input type="text"  class="form-control" name="customerName" placeholder="Enter Fullname">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" class="form-control" name="email" placeholder="Enter Email">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="text" class="form-control" name="phoneNumber" placeholder="Enter Phone">
+                            </div>
+                            <div class="form-group">
+                                <label>Địa chỉ</label>
+                                <input type="text" class="form-control" name="address" placeholder="Enter Address">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!--View Modal -->
+<div id="viewOrder" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div id="b" class="modal-dialog modal-dialog-centered" role="document">
+    <div id="a" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">View</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table id="table-view" class="table">
+          <thead>
+            <tr>
+                <th>Mã đơn hàng</th>
+                <th>Ngày đặt</th>
+                <th>Ngày nhận</th>
+                <th>Tổng tiền</th>
+                <th>Mã xe</th>
+                <th>Tên xe</th>
+                <th>Mã kho</th>
+                <th>Tên kho</th>
+                <th>Địa chỉ kho</th>
+                <th>Mã sản phẩm</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Mã thanh toán</th>
+                <th>Phương thức thanh toán</th>
+                <th>Tổng thanh toán</th>
+                <th>Ngày thanh toán</th>
+                <th>Trạng thái thanh toán</th>
+            </tr>
+          </thead>
+          
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <table id="table-customer" class="table table-bordered">
+            <tr>
+                <th>Mã khách hàng</th>
+                <th>Tên khách hàng</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Địa chỉ</th>
+                <th>Action</th>
+            </tr>
+            
+
+        </table>
+    </div>
+    <script src="customer.js"></script>
+</body>
+
+</html>

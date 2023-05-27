@@ -1,0 +1,174 @@
+/ Reset CSS /
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  / Global Styles /
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  section.hero {
+    text-align: center;
+    background-image: url("../images/anh\ backgroud.png");
+    background-size: cover;
+    padding: 200px;
+  }
+  
+  section.hero h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  section.hero p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 40px;
+    }
+    
+    
+    
+    section.features {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 50px;
+    }
+    
+    .feature {
+      flex-basis: calc(100% / 7); / Chia đều không gian cho 7 phần tử /
+      text-align: center;
+      margin-bottom: 20px; / Khoảng cách giữa các div /
+    }
+    
+    .feature img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    }
+    
+    footer {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+    }  
+
+    /*quanlydonhang*/
+    
+    .order-list {
+      margin: 20px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    tr:hover {
+      background-color: #e0e0e0;
+    }
+
+    .button-adddonhang {
+      background-color: #4CAF50; / Màu nền /
+      border: none; / Không có đường viền /
+      color: white; / Màu chữ /
+      padding: 10px 20px; / Kích thước padding /
+      text-align: center; / Căn giữa nội dung /
+      text-decoration: none; / Không gạch chân /
+      display: inline-block; / Hiển thị dạng inline /
+      font-size: 16px; / Cỡ chữ /
+      cursor: pointer; / Con trỏ chuột thành hình bàn tay /
+      border-radius: 4px; / Bo góc /
+      transform: translateX(13%);
+      margin-top: 15px;;
+    }
+    
+    .button-adddonhang:hover {
+      background-color: #45a049; / Màu nền khi hover /
+    }
+    
+    /*quanlyxevanchuyen*/
+
+    .button-addxe {
+      background-color: #4CAF50; / Màu nền /
+      border: none; / Không có đường viền /
+      color: white; / Màu chữ /
+      padding: 10px 20px; / Kích thước padding /
+      text-align: center; / Căn giữa nội dung /
+      text-decoration: none; / Không gạch chân /
+      display: inline-block; / Hiển thị dạng inline /
+      font-size: 16px; / Cỡ chữ /
+      cursor: pointer; / Con trỏ chuột thành hình bàn tay /
+      border-radius: 4px; / Bo góc /
+      transform: translateX(20%);
+      margin-top: 15px;;
+    }
+    
+    .button-addxe:hover {
+      background-color: #45a049; / Màu nền khi hover /
+    }
+
+    /*quanlykhachhang*/
+
+    .button-addkhachhang {
+      background-color: #4CAF50; / Màu nền /
+      border: none; / Không có đường viền /
+      color: white; / Màu chữ /
+      padding: 10px 20px; / Kích thước padding /
+      text-align: center; / Căn giữa nội dung /
+      text-decoration: none; / Không gạch chân /
+      display: inline-block; / Hiển thị dạng inline /
+      font-size: 16px; / Cỡ chữ /
+      cursor: pointer; / Con trỏ chuột thành hình bàn tay /
+      border-radius: 4px; / Bo góc /
+      transform: translateX(12%);
+      margin-top: 15px;;
+    }
+    
+    .button-addkhachhang:hover {
+      background-color: #45a049; / Màu nền khi hover /
+    }
+#b {
+  margin-left: 40px;
+}
+#a {
+  min-width: 1250px;
+}

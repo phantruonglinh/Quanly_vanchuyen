@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Quản lý vận chuyển</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Quản lý vận chuyển</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="customer.html">Quản lý khách hàng</a></li>
+                <li><a href="quanlydonhang.html">Danh sách đơn hàng</a></li>
+                <li><a href="transportvehicle.html">Quản lý xe vận chuyển</a></li>
+                <li><a href="quanlysanpham.html">Quản lý sản phẩm</a></li>
+                <li><a href="quanlyloaihang.html">Quản lý loại hàng</a></li>
+                <li><a href="quanlykho.html">Quản lý kho</a></li>
+                <li><a href="quanlythanhtoan.html">Quản lý thanh toán </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <div class="container">
+            <h2>LIST ĐƠN HÀNG</h2>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        Thêm đơn hàng
+    </button>
+            <!-- Modal -->
+            <input type="text" id="searchInput" placeholder="Search order...">
+
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Thêm mới</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-order">
+                                <div class="form-group">
+                                    <label>Mã khách hàng</label>
+                                    <input type="text" class="form-control" name="customerID" placeholder="Enter Mã khách hàng">
+                                </div>
+                                <div class="form-group">
+                                    <label>Ngày nhận</label>
+                                    <input type="text" class="form-control" name="deliveryDate" placeholder="Enter Ngày nhận">
+                                </div>
+                                <div class="form-group">
+                                    <label>Ngày đặt</label>
+                                    <input type="text" class="form-control" name="orderDate" placeholder="Enter Ngày đặt">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mã thanh toán</label>
+                                    <input type="text" class="form-control" name="paymentID" placeholder="Enter Mã thanh toán">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mã sản phẩm</label>
+                                    <input type="text" class="form-control" name="productID" placeholder="Enter Mã sản phẩm">
+                                </div>
+                                <div class="form-group">
+                                    <label>Tổng tiền</label>
+                                    <input type="text" class="form-control" name="totalAmount" placeholder="Enter Tổng tiền">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mã xe</label>
+                                    <input type="text" class="form-control" name="transportVehicleID" placeholder="Enter Mã xe">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mã kho</label>
+                                    <input type="text" class="form-control" name="wareHouseID" placeholder="Enter Mã kho">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Edit Modal -->
+            <div id="editOr" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Cập nhật</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-order">
+                                <div class="form-group">
+                                    <label>Mã khách hàng</label>
+                                    <input type="text" class="form-control" name="customerID" placeholder="Enter Mã khách hàng">
+                                </div>
+                                <div class="form-group">
+                                    <label>Ngày nhận</label>
+                                    <input type="text" class="form-control" name="deliveryDate" placeholder="Enter Ngày nhận">
+                                </div>
+                                <div class="form-group">
+                                    <label>Ngày đặt</label>
+                                    <input type="text" class="form-control" name="orderDate" placeholder="Enter Ngày đặt">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mã thanh toán</label>
+                                    <input type="text" class="form-control" name="paymentID" placeholder="Enter Mã thanh toán">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mã sản phẩm</label>
+                                    <input type="text" class="form-control" name="productID" placeholder="Enter Mã sản phẩm">
+                                </div>
+                                <div class="form-group">
+                                    <label>Tổng tiền</label>
+                                    <input type="text" class="form-control" name="totalAmount" placeholder="Enter Tổng tiền">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mã xe</label>
+                                    <input type="text" class="form-control" name="transportVehicleID" placeholder="Enter Mã xe">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mã kho</label>
+                                    <input type="text" class="form-control" name="wareHouseID" placeholder="Enter Mã kho">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <table id="table-order" class="table table-bordered">
+                <tr>
+                    <th>Mã đơn hàng</th>
+                    <th>Ngày đặt</th>
+                    <th>Ngày nhận</th>
+                    <th>Tổng tiền</th>
+                    <th>Mã khách hàng</th>
+                    <th>Tên khách hàng</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ khách</th>
+                    <th>Mã xe</th>
+                    <th>Tên xe</th>
+                    <th>Mã kho</th>
+                    <th>Tên kho</th>
+                    <th>Địa chỉ kho</th>
+                    <th>Mã sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Mã thanh toán</th>
+                    <th>Phương thức thanh toán</th>
+                    <th>Tổng thanh toán</th>
+                    <th>Ngày thanh toán</th>
+                    <th>Trạng thái thanh toán</th>
+                    <th>Action</th>
+                </tr>
+
+
+            </table>
+        </div>
+        <script src="order.js"></script>
+    </body>
+
+</html>
